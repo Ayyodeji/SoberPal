@@ -1,16 +1,16 @@
 import "./about.scss";
-import hands from "../../assets/hands.jpg";
+
 import TeamData from "../../Data/TeamData";
-import AppStat from "../../Data/AppStat";
 import OurValues from "../../Components/ourvalues/OurValues";
 import interview from "../../assets/interview.png";
 import Job from "../../Components/jobcontainer/Job";
-import Button from '../../UI/Button'
+import Button from "../../UI/Button";
+import AppStats from "../../Components/appstats/AppStats";
 
 const About = () => {
   return (
-    <section>
-      <header>
+    <div  className="about__container">
+      <header className="header" >
         <p className="about">About us</p>
         <h1>About Soberpal</h1>
         <p className="about__soberpal">
@@ -21,26 +21,10 @@ const About = () => {
         </p>
         <p className="learn__more">Learn more about the team behind soberpal</p>
       </header>
-      <section className="stats">
-        <img src={hands} alt="hands" className="hands" />
-        <div className="stats__content">
-          <p>We’ve helped a couple of people reduce their inatke of alcohol</p>
-          <h3>
-            We’re only just getting <br />
-            started on our journey
-          </h3>
-          {/* Stats data */}
-          <div className="stats__data-container">
-            {AppStat.map((stat) => (
-              <div className="stats__data" key={stat.id}>
-                <p className="count">{stat.count}</p>
-                <p>{stat.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className="team">
+       {/* app stats section */}
+       <AppStats/>
+
+      <div className="team">
         <h3>Meet our team</h3>
         <p>
           Our philosophy is simple — hire a team of diverse, passionate people
@@ -57,7 +41,7 @@ const About = () => {
             </div>
           ))}
         </div>
-      </section>
+      </div>
 
       {/* ourvalues section */}
       <section>
@@ -72,23 +56,20 @@ const About = () => {
           We’re a 100% remote team spread all across the world. Join us!
         </p>
         <div className="interview">
-          <img src={interview} alt="Interview" />
+          <img src={interview} alt="Interview" className="interview__img" />
         </div>
+        {/* job container section */}
+        <Job />
       </section>
 
-       {/* job container section */}
-       <section>
-          <Job />
-        </section>
-
-      <div className="download" >
-          <div>
-            <h6>Download the Soberpal app</h6>
-            <p>Join over 200+ people already growing with Soberpal.</p>
-          </div>
-          <Button text='Download App' />
+      <div className="download">
+        <div>
+          <h6>Download the Soberpal app</h6>
+          <p>Join over 200+ people already growing with Soberpal.</p>
         </div>
-    </section>
+        <Button text="Download App" />
+      </div>
+    </div>
   );
 };
 

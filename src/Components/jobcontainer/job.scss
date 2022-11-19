@@ -41,3 +41,36 @@
     }
   }
 }
+
+
+/* On tablet screens 900px or less */
+@media screen and (max-width: 900px) {
+  .job {
+   display: grid;
+   justify-content: center;
+   & > h5 {
+    margin-left: .5rem;
+  }
+    .job__container{
+      margin-left: .5rem;
+      width: 25rem;
+    }
+    
+  }
+}
+
+ /* On mobile screens 600px or less */
+ @media screen and (max-width: 600px) {
+  .job {
+   display: grid;
+   justify-content: center;
+   & > h5 {
+    margin-left: .5rem;
+  }
+    .job__container{
+      margin-left: .5rem;
+      width: 25rem;
+    }
+    
+  }
+}

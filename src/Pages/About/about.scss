@@ -1,71 +1,33 @@
-section {
-  header {
+.about__container {
+  background-color: white;
+  text-align: center;
+  & > .header {
     .about {
       color: var(--secondary-700);
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 1.2rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      font-size: 48px;
+      color: var(--primary-600);
     }
     .about__soberpal {
       color: var(--gray-500);
-      line-height: 2rem;
+      line-height: 2.3rem;
     }
     .learn__more {
       color: var(--primary-500);
       font-weight: 400;
+      margin-top: 2rem;
     }
   }
-  .stats {
-    margin-top: 6rem;
-    background: var(--primary-50);
-    height: auto;
-    padding: 3rem;
-    gap: 5rem;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap-reverse;
-    justify-content: center;
-    text-align: center;
-    .hands {
-      height: 30rem;
-      width: 30rem;
-      padding: 0 2rem;
-    }
-    .stats__content {
-      & > p {
-        color: var(--secondary-600);
-        font-weight: 700;
-      }
-      & > h3 {
-        color: var(--primary-500);
-        font-weight: 700;
-        font-size: 30px;
-        width: auto;
-        word-spacing: 0.79rem;
-      }
-      .stats__data-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
 
-        .stats__data {
-          text-align: left;
-          justify-content: center;
-
-          & > p {
-            margin-bottom: 2rem;
-            color: var(--primary-500);
-          }
-          .count {
-            color: var(--secondary-600);
-            font-weight: 700;
-            font-size: 3rem;
-            margin: 0;
-          }
-        }
-      }
-    }
-  }
   .team {
     text-align: center;
+    margin-bottom: 5rem;
+
     h3 {
       color: var(--primary-500);
       font-weight: 700;
@@ -137,6 +99,7 @@ section {
       align-items: center;
     }
   }
+
   .download {
     text-align: center;
     display: flex;
@@ -155,19 +118,38 @@ section {
       & > p {
         font-weight: 400;
         font-size: 17px;
-        word-spacing: .2rem;
+        word-spacing: 0.2rem;
         color: var(--gray-500);
       }
     }
   }
 }
 
-@media (min-width: 370px) {
-  .stats {
-    .stats__content {
-      .stats__data-container {
-        display: grid;
-        grid-template-columns: 1fr;
+/* On tablet screens */
+@media screen and (max-width: 992px) {
+  .about {
+    & > .header{
+      h1{
+        font-size: 1.4rem;
+      }
+    }
+    .download {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & > div {
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* On mobile screens */
+@media (min-width: 600px) {
+  .about {
+    & > .header{
+     & > h1{
+        transform: scale(.8);
       }
     }
   }

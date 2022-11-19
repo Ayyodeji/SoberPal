@@ -2,7 +2,7 @@ import "./ourvalues.scss";
 import { BiUser } from "react-icons/bi";
 import ValueData from "../../Data/ValueData";
 
-const OurValues = () => {
+const OurValues = ({icon, header, content,}) => {
   return (
     <div className="value">
       <header>

@@ -7,7 +7,7 @@ const Job = () => {
   return (
     <>
       <div className="job">
-        <h5>Designer</h5>
+        <h5>Design</h5>
         <div className="job__container">
           <h6>Product Designer</h6>
           <p>

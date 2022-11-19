@@ -8,7 +8,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <div className="py-4 max-w-[1400px] w-[90%] mx-auto flex justify-between">
+      <div className="py-4 px-10 mb-10 max-w-[1400px] w-[90%] bg-[#ffffff] w-[100vw] mx-auto flex justify-between">
         <Link to="/">
           <p className="text-[32px] text-blue font-[700]">{navbarList.logo}</p>
         </Link>

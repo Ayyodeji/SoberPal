@@ -8,7 +8,7 @@ import Map from '../../assets/Map.png'
 
 const Contact = () => {
   return (
-    <section>
+    <div className="contact" >
       <header>
         <h1>Contact Us</h1>
         <p>You can always reach out to us. We wil be glad to hear from you</p>
@@ -55,7 +55,7 @@ const Contact = () => {
               <GrLocation />
               <p>256, Newyork City, United States</p>
             </div>
-            <div className="contact">
+            <div className="contact__details">
               <BsTelephone />
               <p>01 3456789</p>
             </div>
@@ -81,7 +81,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
